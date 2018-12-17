@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EFAXALUNO.FXMLControleAluno">
+   <children>
+      <Button fx:id="BTNCADASTRAR" layoutX="290.0" layoutY="82.0" mnemonicParsing="false" onAction="#cadastrar" text="Cadastrar" />
+      <Button fx:id="BTNEDITAR" layoutX="344.0" layoutY="300.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="BTNEXCLUIR" layoutX="536.0" layoutY="300.0" mnemonicParsing="false" onAction="#deletar" text="Excluir" />
+      <Button fx:id="BTNPESQUISAR" layoutX="25.0" layoutY="300.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar" />
+      <Button fx:id="BTNSAIR" layoutX="630.0" layoutY="300.0" mnemonicParsing="false" onAction="#sair" text="Sair" />
+      <TableView fx:id="TABLE" layoutX="12.0" layoutY="376.0" prefHeight="210.0" prefWidth="397.0">
+        <columns>
+          <TableColumn fx:id="TABLEID" prefWidth="90.0" text="ID" />
+          <TableColumn fx:id="TABLENOME" prefWidth="111.0" text="Nome" />
+            <TableColumn fx:id="TABLEMATRICULA" prefWidth="105.0" text="Matrícula" />
+            <TableColumn fx:id="TABLESEXO" prefWidth="95.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Label layoutX="143.0" prefHeight="76.0" prefWidth="314.0" text="Cadastro de Alunos - Faculdade">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TXTNOME" layoutX="125.0" layoutY="128.0" prefHeight="25.0" prefWidth="164.0" promptText="Digite seu nome" />
+      <TextField fx:id="TXTMATRICULA" layoutX="125.0" layoutY="172.0" prefHeight="25.0" prefWidth="164.0" promptText="Digite sua matrícula" />
+      <TextField fx:id="TXTSEXO" layoutX="125.0" layoutY="218.0" prefHeight="25.0" prefWidth="164.0" promptText="Digite seu sexo" />
+      <Label layoutX="37.0" layoutY="132.0" text="  Nome:" />
+      <Label layoutX="33.0" layoutY="176.0" text="Matrícula:" />
+      <Label layoutX="45.0" layoutY="222.0" text="Sexo:" />
+      <TextField fx:id="TXTPESQUISAR" layoutX="120.0" layoutY="300.0" prefHeight="25.0" prefWidth="174.0" promptText="Digite o que deseja pesquisar" />
+      <Button fx:id="BTNATUALIZAR" layoutX="434.0" layoutY="300.0" mnemonicParsing="false" onAction="#refreshTable" text="Atualizar" />
+      <TextField fx:id="TXTNOMEPROFESSOR" layoutX="400.0" layoutY="149.0" prefHeight="25.0" prefWidth="164.0" promptText="Digite o nome do Professor" />
+      <TextField fx:id="TXTCPFPROFESSOR" layoutX="400.0" layoutY="193.0" prefHeight="25.0" prefWidth="164.0" promptText="Digite o CPF do Professor" />
+      <Label layoutX="300.0" layoutY="153.0" text="Nome Professor:" />
+      <Label layoutX="306.0" layoutY="197.0" text="CPF Professor:" />
+      <TableView fx:id="TABLE2" layoutX="409.0" layoutY="376.0" prefHeight="210.0" prefWidth="284.0">
+        <columns>
+          <TableColumn fx:id="TABLENOMEPROFESSOR" prefWidth="143.0" text="Nome Professor" />
+          <TableColumn fx:id="TABLECPFPROFESSOR" prefWidth="140.0" text="CPF Professor" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
